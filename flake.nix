@@ -17,7 +17,7 @@
         LANG = "C.UTF-8";
         root = ./.;
 
-        elixir = pkgs.beam.packages.erlang_27.elixir_1_16;
+        elixir = pkgs.beam.packages.erlang_27.elixir_1_17;
         nodejs = pkgs.nodejs_23;
         postgresql = pkgs.postgresql_17;
       in
