@@ -12,9 +12,8 @@ defmodule SentiGraph.Application do
       SentiGraph.Repo,
       {DNSCluster, query: Application.get_env(:sentigraph, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: SentiGraph.PubSub},
-      # Start a worker by calling: SentiGraph.Worker.start_link(arg)
-      # {SentiGraph.Worker, arg},
-      # Start to serve requests, typically the last entry
+
+      {SentiGraph.Posts, {:num_posts_to_collect, 100, :collect_posts_interval_minutes, 1}},
       SentiGraphWeb.Endpoint
     ]
 
